@@ -2835,10 +2835,10 @@ Result Thread::Run(int num_instructions) {
       // executed.
       case Opcode::Block:
       case Opcode::Catch:
-      case Opcode::CatchAll:
       case Opcode::Else:
       case Opcode::End:
       case Opcode::If:
+      case Opcode::IfExcept:
       case Opcode::InterpData:
       case Opcode::Invalid:
       case Opcode::Loop:
@@ -3418,10 +3418,10 @@ void Thread::Trace(Stream* stream) {
     // executed.
     case Opcode::Block:
     case Opcode::Catch:
-    case Opcode::CatchAll:
     case Opcode::Else:
     case Opcode::End:
     case Opcode::If:
+    case Opcode::IfExcept:
     case Opcode::InterpData:
     case Opcode::Invalid:
     case Opcode::Loop:
@@ -3931,10 +3931,10 @@ void Environment::Disassemble(Stream* stream,
       // executed.
       case Opcode::Block:
       case Opcode::Catch:
-      case Opcode::CatchAll:
       case Opcode::Else:
       case Opcode::End:
       case Opcode::If:
+      case Opcode::IfExcept:
       case Opcode::Invalid:
       case Opcode::Loop:
       case Opcode::Rethrow:
